@@ -1,0 +1,61 @@
+.Clock {
+	--white: hsl(0, 0%, 80%);
+
+	width: 50px;
+	height: 50px;
+
+	border-radius: 1000px;
+	border-color: var(--white);
+	border-style: solid;
+	border-width: 2px;
+
+	position: relative;
+
+	overflow: hidden;
+
+	&.hidden .hand {
+		opacity: 0;
+	}
+
+	.hand {
+		background-color: var(--white);
+
+		width: 50%;
+		height: 2px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform-origin: center left;
+		translate: 0% -50%;
+
+		rotate: 135deg;
+		opacity: 1;
+
+		transition:
+			rotate 0.5s ease-in-out,
+			opacity 0.5s ease-in-out;
+	}
+
+	.hand:nth-child(1) {
+		rotate: var(--rotation-1, 135deg);
+	}
+
+	.hand:nth-child(2) {
+		rotate: var(--rotation-2, 135deg);
+	}
+
+	.dot {
+		background-color: var(--white);
+
+		width: 2px;
+		height: 2px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		translate: -50% -50%;
+	}
+}
