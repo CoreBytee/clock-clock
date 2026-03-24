@@ -1,11 +1,11 @@
 .Full {
-	display: flex;
-	flex-direction: row;
-	gap: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
 
-	.group {
-		display: flex;
-		flex-direction: row;
-		gap: 8px;
-	}
+    .group {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
 }

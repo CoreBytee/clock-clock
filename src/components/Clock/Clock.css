@@ -1,61 +1,63 @@
 .Clock {
-	--white: hsl(0, 0%, 80%);
+    --white: hsl(0, 0%, 70%);
 
-	width: 50px;
-	height: 50px;
+    width: 50px;
+    height: 50px;
 
-	border-radius: 1000px;
-	border-color: var(--white);
-	border-style: solid;
-	border-width: 2px;
+    border-radius: 1000px;
+    border-color: hsl(0, 0%, 10%);
+    border-style: solid;
+    border-width: 2px;
 
-	position: relative;
+    position: relative;
 
-	overflow: hidden;
+    overflow: hidden;
 
-	.hand {
-		background-color: var(--white);
+    .hand {
+        background-color: var(--white);
 
-		width: 50%;
-		height: 2px;
+        width: 50%;
+        height: 4px;
+        border-radius: 10px;
 
-		position: absolute;
-		top: 50%;
-		left: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
 
-		transform-origin: center left;
-		translate: 0% -50%;
+        transform-origin: center left;
+        translate: 0% -50%;
 
-		rotate: 135deg;
-		opacity: 1;
+        rotate: 135deg;
+        opacity: 1;
 
-		transition:
-			rotate 0.5s ease-in-out,
-			opacity 0.5s ease-in-out;
-	}
+        transition:
+            rotate 0.5s ease-in-out,
+            opacity 0.5s ease-in-out;
+    }
 
-	&.hidden .hand {
-		opacity: 0;
-	}
+    &.hidden .hand {
+        opacity: 0;
+    }
 
-	.hand:nth-child(1) {
-		rotate: var(--rotation-1, 135deg);
-	}
+    .hand:nth-child(1) {
+        rotate: var(--rotation-1, 135deg);
+    }
 
-	.hand:nth-child(2) {
-		rotate: var(--rotation-2, 135deg);
-	}
+    .hand:nth-child(2) {
+        rotate: var(--rotation-2, 135deg);
+    }
 
-	.dot {
-		background-color: var(--white);
+    .dot {
+        background-color: var(--white);
 
-		width: 2px;
-		height: 2px;
+        width: 4px;
+        height: 4px;
+        border-radius: 10px;
 
-		position: absolute;
-		top: 50%;
-		left: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
 
-		translate: -50% -50%;
-	}
+        translate: -50% -50%;
+    }
 }
