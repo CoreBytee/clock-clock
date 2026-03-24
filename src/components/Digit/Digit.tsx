@@ -292,6 +292,7 @@ export default function Digit({
 		<div className="Digit">
 			{DIGITS[digit].map((rotation, index) => (
 				<Clock
+					// biome-ignore lint/suspicious/noArrayIndexKey: The order or amount does not change so this is safe
 					key={index}
 					rotation={ROTATIONS[rotation as keyof typeof ROTATIONS]!}
 				/>

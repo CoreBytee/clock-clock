@@ -4,15 +4,15 @@ import App from "./components/app/App";
 
 const elem = document.getElementById("root")!;
 const app = (
-  <StrictMode>
-    <App />
-  </StrictMode>
+	<StrictMode>
+		<App />
+	</StrictMode>
 );
 
 if (import.meta.hot) {
-  if (!import.meta.hot.data.root) import.meta.hot.data.root = createRoot(elem);
-  const root = import.meta.hot.data.root;
-  root.render(app);
+	if (!import.meta.hot.data.root) import.meta.hot.data.root = createRoot(elem);
+	const root = import.meta.hot.data.root;
+	root.render(app);
 } else {
-  createRoot(elem).render(app);
+	createRoot(elem).render(app);
 }

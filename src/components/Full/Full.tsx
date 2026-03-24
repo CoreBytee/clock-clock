@@ -31,17 +31,10 @@ export default function Full() {
 	return (
 		<div className={"Full"}>
 			{digits.map((group, index) => (
+				// biome-ignore lint/suspicious/noArrayIndexKey: The order or amount does not change so this is safe
 				<div key={index} className="group">
-					<Digit
-						digit={
-							group[0] as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-						}
-					/>
-					<Digit
-						digit={
-							group[1] as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-						}
-					/>
+					<Digit digit={group[0] as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9} />
+					<Digit digit={group[1] as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9} />
 				</div>
 			))}
 		</div>

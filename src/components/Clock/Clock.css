@@ -13,10 +13,6 @@
 
 	overflow: hidden;
 
-	&.hidden .hand {
-		opacity: 0;
-	}
-
 	.hand {
 		background-color: var(--white);
 
@@ -36,6 +32,10 @@
 		transition:
 			rotate 0.5s ease-in-out,
 			opacity 0.5s ease-in-out;
+	}
+
+	&.hidden .hand {
+		opacity: 0;
 	}
 
 	.hand:nth-child(1) {
